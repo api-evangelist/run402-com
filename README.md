@@ -74,51 +74,113 @@ Everything profiled for run402-com is published on APIs.io rather than in this r
 
 ### APIs (43)
 
-- run402-com Admin API — SQL migrations, RLS policies, usage, and schema introspection
-- run402-com Agent API — Agent contact registration (wallet auth, free within tier)
-- run402-com Agent Messaging API — The AgentMessaging API from run402-com — 11 operation(s) for agentmessaging.
-- run402-com AI API — The AI API from run402-com — 4 operation(s) for ai.
-- run402-com App Repos API — Plain, unencrypted git repositories owned by a project and written by its app (app-repos). Many per project, with an always-present `default`; linear…
-- run402-com Apply API — Unified apply primitive — plan + commit + operations + resume.
-- run402-com Auth API — User signup, login, token refresh, and logout
-- run402-com Billing API — Prepaid allowance accounts and checkout
-- run402-com Buzz Control Plane API — The Buzz Control Plane API from run402-com — 24 operation(s) for buzz control plane.
-- run402-com CI Federation API — The CI Federation API from run402-com — 5 operation(s) for ci federation.
-- run402-com Console API — The console for the person behind an agent (console spec). API-first: the reference web console is just a consumer of these endpoints.
-- run402-com Content API — v1.34 generic CAS content plan/commit (used internally by the SDK for byte uploads).
-- run402-com Contracts API — The Contracts API from run402-com — 11 operation(s) for contracts.
-- run402-com Control Plane API — The ControlPlane API from run402-com — 30 operation(s) for controlplane.
-- run402-com Control Plane Auth API — The ControlPlaneAuth API from run402-com — 1 operation(s) for controlplaneauth.
-- run402-com Diagnostics API — The Diagnostics API from run402-com — 1 operation(s) for diagnostics.
-- run402-com Escalations API — The Escalations API from run402-com — 7 operation(s) for escalations.
-- run402-com Faucet API — Testnet USDC drip for development
-- run402-com Feedback API — Feedback / contact endpoint (wallet auth, free within tier)
-- run402-com Functions API — Serverless function deploy, invoke, logs, and secrets
-- run402-com Health API — Health check and x402 discovery
-- run402-com Identity Links API — The Identity Links API from run402-com — 7 operation(s) for identity links.
-- run402-com Image API — AI image generation (x402-gated, per-call)
-- run402-com Jobs API — The Jobs API from run402-com — 4 operation(s) for jobs.
-- run402-com Live API — The Live API from run402-com — 2 operation(s) for live.
-- run402-com Mailboxes API — Project-scoped email at slug@project-host.mail.run402.com, with ProjectDomain custom addresses and managed fallback
-- run402-com Message API — The Message API from run402-com — 1 operation(s) for message.
-- run402-com Org API — The Org API from run402-com — 28 operation(s) for org.
-- run402-com Project Archives API — Portable archive export for the supported Run402 Core runtime slice of a Cloud project. This is the no-lock-in path, not a backup/SLA or allowance/spend-cap…
-- run402-com Project Branches API — The Project Branches API from run402-com — 3 operation(s) for project branches.
-- run402-com Project domains API — Project-scoped desired/observed/effective lifecycle for custom web and email domains
-- run402-com Project Snapshots API — The Project Snapshots API from run402-com — 4 operation(s) for project snapshots.
-- run402-com Project Transfers API — The Project Transfers API from run402-com — 7 operation(s) for project transfers.
-- run402-com Projects API — Provision and manage database projects (wallet auth, free within tier)
-- run402-com Publish API — Publish and fork app versions
-- run402-com REST API — PostgREST proxy — full CRUD on your tables
-- run402-com SSR Cache API — The SSR Cache API from run402-com — 2 operation(s) for ssr cache.
-- run402-com Stable Hosts API — The Stable Hosts API from run402-com — 22 operation(s) for stable hosts.
-- run402-com Storage API — Upload, download, delete, sign, and list files
-- run402-com Subdomains API — Custom subdomain management for deployments
-- run402-com Tiers API — Wallet-level tier lease — set (start, renew, upgrade) and check status
-- run402-com Vault API — The vault API from run402-com — 45 operation(s) for vault.
-- run402-com Vouchers API — Allowance vouchers: single-use promo codes redeemable by an authenticated wallet for allowance. A redeemed voucher spends like any other allowance (tiers,…
+- [run402-com Admin API](https://apis.io/apis/run402-com/run402-com-admin-api/) — SQL migrations, RLS policies, usage, and schema introspection
+- [run402-com Agent API](https://apis.io/apis/run402-com/run402-com-agent-api/) — Agent contact registration (wallet auth, free within tier)
+- [run402-com Agent Messaging API](https://apis.io/apis/run402-com/run402-com-agentmessaging-api/) — The AgentMessaging API from run402-com — 11 operation(s) for agentmessaging.
+- [run402-com AI API](https://apis.io/apis/run402-com/run402-com-ai-api/) — The AI API from run402-com — 4 operation(s) for ai.
+- [run402-com App Repos API](https://apis.io/apis/run402-com/run402-com-app-repos-api/) — Plain, unencrypted git repositories owned by a project and written by its app (app-repos). Many per project, with an always-present `default`; linear…
+- [run402-com Apply API](https://apis.io/apis/run402-com/run402-com-apply-api/) — Unified apply primitive — plan + commit + operations + resume.
+- [run402-com Auth API](https://apis.io/apis/run402-com/run402-com-auth-api/) — User signup, login, token refresh, and logout
+- [run402-com Billing API](https://apis.io/apis/run402-com/run402-com-billing-api/) — Prepaid allowance accounts and checkout
+- [run402-com Buzz Control Plane API](https://apis.io/apis/run402-com/run402-com-buzz-control-plane-api/) — The Buzz Control Plane API from run402-com — 24 operation(s) for buzz control plane.
+- [run402-com CI Federation API](https://apis.io/apis/run402-com/run402-com-ci-federation-api/) — The CI Federation API from run402-com — 5 operation(s) for ci federation.
+- [run402-com Console API](https://apis.io/apis/run402-com/run402-com-console-api/) — The console for the person behind an agent (console spec). API-first: the reference web console is just a consumer of these endpoints.
+- [run402-com Content API](https://apis.io/apis/run402-com/run402-com-content-api/) — v1.34 generic CAS content plan/commit (used internally by the SDK for byte uploads).
+- [run402-com Contracts API](https://apis.io/apis/run402-com/run402-com-contracts-api/) — The Contracts API from run402-com — 11 operation(s) for contracts.
+- [run402-com Control Plane API](https://apis.io/apis/run402-com/run402-com-controlplane-api/) — The ControlPlane API from run402-com — 30 operation(s) for controlplane.
+- [run402-com Control Plane Auth API](https://apis.io/apis/run402-com/run402-com-controlplaneauth-api/) — The ControlPlaneAuth API from run402-com — 1 operation(s) for controlplaneauth.
+- [run402-com Diagnostics API](https://apis.io/apis/run402-com/run402-com-diagnostics-api/) — The Diagnostics API from run402-com — 1 operation(s) for diagnostics.
+- [run402-com Escalations API](https://apis.io/apis/run402-com/run402-com-escalations-api/) — The Escalations API from run402-com — 7 operation(s) for escalations.
+- [run402-com Faucet API](https://apis.io/apis/run402-com/run402-com-faucet-api/) — Testnet USDC drip for development
+- [run402-com Feedback API](https://apis.io/apis/run402-com/run402-com-feedback-api/) — Feedback / contact endpoint (wallet auth, free within tier)
+- [run402-com Functions API](https://apis.io/apis/run402-com/run402-com-functions-api/) — Serverless function deploy, invoke, logs, and secrets
+- [run402-com Health API](https://apis.io/apis/run402-com/run402-com-health-api/) — Health check and x402 discovery
+- [run402-com Identity Links API](https://apis.io/apis/run402-com/run402-com-identity-links-api/) — The Identity Links API from run402-com — 7 operation(s) for identity links.
+- [run402-com Image API](https://apis.io/apis/run402-com/run402-com-image-api/) — AI image generation (x402-gated, per-call)
+- [run402-com Jobs API](https://apis.io/apis/run402-com/run402-com-jobs-api/) — The Jobs API from run402-com — 4 operation(s) for jobs.
+- [run402-com Live API](https://apis.io/apis/run402-com/run402-com-live-api/) — The Live API from run402-com — 2 operation(s) for live.
+- [run402-com Mailboxes API](https://apis.io/apis/run402-com/run402-com-mailboxes-api/) — Project-scoped email at slug@project-host.mail.run402.com, with ProjectDomain custom addresses and managed fallback
+- [run402-com Message API](https://apis.io/apis/run402-com/run402-com-message-api/) — The Message API from run402-com — 1 operation(s) for message.
+- [run402-com Org API](https://apis.io/apis/run402-com/run402-com-org-api/) — The Org API from run402-com — 28 operation(s) for org.
+- [run402-com Project Archives API](https://apis.io/apis/run402-com/run402-com-project-archives-api/) — Portable archive export for the supported Run402 Core runtime slice of a Cloud project. This is the no-lock-in path, not a backup/SLA or allowance/spend-cap…
+- [run402-com Project Branches API](https://apis.io/apis/run402-com/run402-com-project-branches-api/) — The Project Branches API from run402-com — 3 operation(s) for project branches.
+- [run402-com Project domains API](https://apis.io/apis/run402-com/run402-com-project-domains-api/) — Project-scoped desired/observed/effective lifecycle for custom web and email domains
+- [run402-com Project Snapshots API](https://apis.io/apis/run402-com/run402-com-project-snapshots-api/) — The Project Snapshots API from run402-com — 4 operation(s) for project snapshots.
+- [run402-com Project Transfers API](https://apis.io/apis/run402-com/run402-com-project-transfers-api/) — The Project Transfers API from run402-com — 7 operation(s) for project transfers.
+- [run402-com Projects API](https://apis.io/apis/run402-com/run402-com-projects-api/) — Provision and manage database projects (wallet auth, free within tier)
+- [run402-com Publish API](https://apis.io/apis/run402-com/run402-com-publish-api/) — Publish and fork app versions
+- [run402-com REST API](https://apis.io/apis/run402-com/run402-com-rest-api/) — PostgREST proxy — full CRUD on your tables
+- [run402-com SSR Cache API](https://apis.io/apis/run402-com/run402-com-ssr-cache-api/) — The SSR Cache API from run402-com — 2 operation(s) for ssr cache.
+- [run402-com Stable Hosts API](https://apis.io/apis/run402-com/run402-com-stable-hosts-api/) — The Stable Hosts API from run402-com — 22 operation(s) for stable hosts.
+- [run402-com Storage API](https://apis.io/apis/run402-com/run402-com-storage-api/) — Upload, download, delete, sign, and list files
+- [run402-com Subdomains API](https://apis.io/apis/run402-com/run402-com-subdomains-api/) — Custom subdomain management for deployments
+- [run402-com Tiers API](https://apis.io/apis/run402-com/run402-com-tiers-api/) — Wallet-level tier lease — set (start, renew, upgrade) and check status
+- [run402-com Vault API](https://apis.io/apis/run402-com/run402-com-vault-api/) — The vault API from run402-com — 45 operation(s) for vault.
+- [run402-com Vouchers API](https://apis.io/apis/run402-com/run402-com-vouchers-api/) — Allowance vouchers: single-use promo codes redeemable by an authenticated wallet for allowance. A redeemed voucher spends like any other allowance (tiers,…
 
-_These APIs get their own pages on APIs.io at the next catalog build, and this README is re-rendered with links when they do._
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Run402 Com Webhooks](https://apis.io/asyncapis/run402-com/run402-com-webhooks/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Run402 Com Agentic Access](https://apis.io/agentic-access/run402-com/run402-com-agentic-access/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [DeployPlanResponse](https://apis.io/schemas/run402-com/run402-com-deploy-plan-response/)
+- [Mailbox](https://apis.io/schemas/run402-com/run402-com-mailbox/)
+- [ProjectEventFeedPage](https://apis.io/schemas/run402-com/run402-com-project-event-feed-page/)
+- [ProjectTransferPreview](https://apis.io/schemas/run402-com/run402-com-project-transfer-preview/)
+- [ReleaseInventory](https://apis.io/schemas/run402-com/run402-com-release-inventory/)
+- [StableHostResolveResponse](https://apis.io/schemas/run402-com/run402-com-stable-host-resolve-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Run402 Com Context](https://apis.io/jsonld/run402-com/run402-com-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [run402-com API Rules](https://apis.io/rules/run402-com/run402-com-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Run402 Com Authentication](https://apis.io/security/run402-com/run402-com-authentication/)
+- [Run402 Com Domain Security](https://apis.io/security/run402-com/run402-com-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Run402 Com Scopes](https://apis.io/scopes/run402-com/run402-com-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Run402 Com Plans Pricing](https://apis.io/plans/run402-com/run402-com-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Run402 Com Rate Limits](https://apis.io/rate-limits/run402-com/run402-com-rate-limits/)
 
 ## Where to find this API
 
@@ -138,7 +200,46 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-Not yet rated. See [apis.io/providers/run402-com/](https://apis.io/providers/run402-com/).
+**Kin Score 68.7** — exemplar · rubric 0.25.0 · scored 2026-10-29
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 68.6 |
+| Contract governance | 79.1 |
+| Operational transparency | 73.2 |
+| Developer ergonomics | 61.2 |
+| Access clarity | 60.0 |
+
+**Agent readiness 58.3** — agent-native
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | unknown |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | verified |
+| Error Semantics | verified |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | verified |
+| Event Surface Described | unknown |
+| Agent Skills | unknown |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | yes |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | partial |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 26.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/run402-com/](https://apis.io/providers/run402-com/).
 
 ## How this profile is made
 
